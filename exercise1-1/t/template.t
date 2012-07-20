@@ -18,6 +18,7 @@ my $expected = <<'HTML';
     <p>これはコンテンツです。&amp;&lt;&gt;&quot;</p>
   </body>
 </html>
+
 HTML
 
 chomp $expected;

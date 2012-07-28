@@ -6,7 +6,7 @@ use FindBin::libs;
 
 use_ok 'TemplateEngine';
 
-my $template = TemplateEngine->new( file => '../templates/main.html' );
+my $template = TemplateEngine->new( file => 'templates/main.html' );
 isa_ok $template, 'TemplateEngine';
 
 my $expected = <<'HTML';
@@ -18,10 +18,7 @@ my $expected = <<'HTML';
     <p>これはコンテンツです。&amp;&lt;&gt;&quot;</p>
   </body>
 </html>
-
 HTML
-
-chomp $expected;
 
 cmp_ok $template->render({
     title   => 'タイトル',
